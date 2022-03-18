@@ -1,0 +1,13 @@
+<div class="d-flex flex-wrap">
+
+    <div class="card mx-5 my-2" style="width: 12rem;" *ngFor="let user of users">
+        <img [src]="user.avatar" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{user.first_name}} {{user.last_name}} </h5>
+            <p class="card-text">Some quick example text to build on the card.</p>
+            <p class="card-text"> <span class="text-muted"> ID: {{user.id}} </span> </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+</div>
