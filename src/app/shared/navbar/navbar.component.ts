@@ -15,7 +15,6 @@ export class NavbarComponent implements OnInit {
 
   irUsuario(txtInput) {
     if(txtInput) {
-      console.log(txtInput);
       this.router.navigate(['/usuario', txtInput])
     }
   }

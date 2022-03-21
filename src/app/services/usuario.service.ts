@@ -14,8 +14,17 @@ export class UsuarioService {
   }  
 
   getUser() {
-    return this.http.get(`${this.URL}/users/`)
-           .pipe(map( resp => resp['data']));
+    return this.http.get(`${this.URL}/users?delay=1`)
+    .pipe(
+      map( resp => resp['data'])
+    );
+  }
+
+  getUseById(id: string) {
+    return this.http.get(`${this.URL}/users/${id}`)
+    .pipe(
+      map( resp => resp['data'])
+    );
   }
 
 }
